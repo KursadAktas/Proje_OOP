@@ -1,0 +1,30 @@
+﻿@using Proje_OOP.Entity;
+@model Product
+
+
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Views/Shared/_CoreLayout.cshtml";
+}
+
+<h1>Ürün Güncelleme Sayfası</h1>
+
+<form method="post">
+    @Html.Label("Ürün ID")
+    @Html.TextBoxFor(x=> x.Id, new {@class ="form-control" } ) @*satırın tasarımı*@
+    <br />
+
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(x=> x.Name, new {@class ="form-control" } )
+    <br />
+
+    @Html.Label("Ürün Fiyatı")
+    @Html.TextBoxFor(x=> x.Price, new {@class ="form-control" } )
+    <br />
+    @Html.Label("Ürün Stok Sayısı")
+    @Html.TextBoxFor(x=> x.Stock, new {@class ="form-control" } )
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+
+</form>
+
